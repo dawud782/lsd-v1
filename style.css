@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    overflow: hidden;
+    background-image: url( https://mir-s3-cdn-cf.behance.net/project_modules/1400/9bc27292880429.5e569ff84e4d0.gif);
+}
+
+nav {
+    display: flex;
+    background-color: black;
+    justify-content: space-around;
+    padding: 25px 0;
+    
+    color: #d7ebd7;
+    font-family: 'Exo 2', sans-serif;
+}
+
+nav span {
+    color: purple;
+}
+
+nav .logo {
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 35%;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #d7ebd7;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+nav ul li {
+    transition: .25s;
+}
+
+nav ul li a:hover {
+    color: purple;
+    text-shadow: 0 0 3px purple
+    ;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 45px;
+    height: 28px;
+    left: -9px;
+    top: -4px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #d7ebd7;
+    border-radius: 3px;
+    transition: all .25s;
+}
+
+
+
+/* humbuger menu animasi */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:last-child {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:last-child {
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    transform: scale(0) translateX(50px);
+    opacity: 0;
+}
+
+
+/* responsive */
+
+/* ukuran tablet */
+@media screen and ( max-width: 768px ) {
+    nav ul {
+        width: 40%;
+    }
+}
+
+/* ukuran mobile */
+@media screen and ( max-width: 576px ) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        text-align: center;
+        background-color: black;
+        background-color: pink;
+        width: 50%;
+        z-index: -1;
+        transform: translatey(-100%);
+        transition: .3s;
+    }
+
+    nav ul.slide {
+        transform: translatex(0);
+    }
+
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.modern-button {
+  background-color: #2ecc71;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.modern-button:hover {
+  background-color: #27ae60;
+}

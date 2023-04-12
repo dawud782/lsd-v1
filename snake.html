@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <!-- Metadata -->
+
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width=device-width">
+        <title>super snake</title>
+        <link href = "images/super-snake.png" rel = "icon"></link>
+        <link rel="stylesheet" href="snake.css">
+        <link rel="stylesheet" href="choice.css">
+        <meta name = "robots" content = "noindex">
+
+        <!-- Data and scripts -->
+
+        <script src = "snake.js"></script>
+        <script src = "methods.js"></script>
+        <script src = "main.js"></script>
+
+    </head>
+
+    <div id="logo"><a href="choice.html"><img src="logo.png"></a></div>
+    <div id="maj">V.1.0</div>
+
+    <body>
+
+        <!-- Game -->
+
+        <div id = "game">
+
+            <!-- Header -->
+
+            <div id = "header">
+
+                <div id = "title">Lsodya Game </div>
+                <div id = "dev">developed by eco27</div>
+
+                <div id = "scores">
+
+                    <div id = "score"></div>
+                    <div id = "$LSD"></div>
+
+                </div>
+
+            </div>
+
+            <!-- Start buttons-->
+
+            <div class = "overlay" id = "start">
+
+                <div id = "start_title"></div>
+
+                <div id = "start_buttons">
+
+                    <div class = "button" id = "play" value="PLAY"  onclick="play()">play</div>
+                    <br>
+                    <div class = "button" id = "help">help</div>
+                    <script>
+                        function play(){
+                             var audio = document.getElementById("audio");
+                             audio.play();
+                                       }
+                    </script>
+                    <audio id="audio" src="chad2.mp3" ></audio>
+
+                </div>
+
+            </div>
+
+            <!-- Game canvas -->
+
+            <canvas id = "canvas" height = "540" width = "1200" tabindex = "1"></canvas>
+
+            <!-- Powerup display -->
+
+            <div id = "powerups">
+
+                <div class = "powerupItem" id = "frenzy_timer">(18s)</div>
+                <br class = "powerupItem" id = "frenzy_break">
+                <div class = "powerupItem" id = "wall_timer">(18s)</div>
+                <br class = "powerupItem" id = "wall_break">
+                <div class = "powerupItem" id = "invincible_timer">(18s)</div>
+
+            </div>
+
+            <!-- Powerup activated overlay -->
+
+            <div class = "overlay" id = "activate">
+
+                <div id = "activate_text"></div>
+
+            </div>
+
+            <!-- Game over -->
+
+            <div class = "overlay" id = "game_over">
+
+                <div id = "game_over_title">game over</div>
+
+                <div id = "game_over_scores"></div>
+
+                <div class = "button" id = "game_over_retry" >retry</div>
+
+            </div>
+
+        </div>
+
+        <!-- Help -->
+
+        <div id = "help_screen">
+
+            <div class = "button" id = "help_back">back</div>
+
+            <div id = "help_title">
+
+                
+                
+
+            </div>
+
+            <div id = "help_content">
+
+                <div id = "help_controls">controls - wasd or arrow keys</div>
+
+                <br>
+                <br>
+
+                powerups
+
+                <br>
+                <br>
+
+                <div class = "helpPowerup" id = "help_frenzy"></div>
+                frenzy - increased point generation rate
+
+                <br>
+                <br>
+
+                <div class = "helpPowerup" id = "help_wall"></div>
+                wall phaser - snake goes through walls
+
+                <br>
+                <br>
+
+                <div class = "helpPowerup" id = "help_invincible"></div>
+                invincibility - snake does not die when tail is hit (still dies from walls)
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

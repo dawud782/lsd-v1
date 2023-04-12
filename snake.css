@@ -1,0 +1,252 @@
+/* General stuff */
+
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap");
+
+* {
+    font-family: Ubuntu Mono;
+    color: #FFFFFF;
+}
+
+body {
+    background-color: #000000;
+}
+
+.overlay {
+    position: absolute;
+    top: 122px;
+    left: 50%;
+
+    height: 540px;
+    width: 1200px;
+
+    z-index: 10;
+
+    text-align: center;
+
+    transform: translateX(-50%);
+}
+
+.button {
+    display: inline-block;
+
+    cursor: pointer;
+
+    font-size: 36px;
+}
+
+.button:hover {
+    color: #DDDDDD;
+}
+
+/* Header */
+
+#title {
+    position: absolute;
+    top: 26px;
+    left: 8vw;
+
+    font-size: 40px;
+}
+
+#dev {
+    position: absolute;
+    top: 76px;
+    left: 8vw;
+
+    font-size: 18px;
+}
+
+#scores {
+    position: absolute;
+    top: 38px;
+    right: 8vw;
+
+    font-size: 24px;
+}
+
+/* Start overlay */
+
+#start_title {
+    position: relative;
+    top: 60px;
+
+    font-size: 50px;
+}
+
+#start_buttons {
+    display: none;
+}
+
+#play {
+    position: relative;
+    top: 140px;
+}
+
+#help {
+    position: relative;
+    top: 180px;
+}
+
+/* Canvas */
+
+#canvas {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+
+    outline: none;
+
+    border: 2px solid #FFFFFF;
+    transform: translateX(-50%);
+}
+
+/* Powerup display */
+
+#powerups {
+    position: absolute;
+    top: 140px;
+    left: calc((100vw - 1200px) / 2 + 60px);
+
+    z-index: 10;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    transform: translateX(-50%);
+}
+
+.powerupItem {
+    display: none;
+}
+
+#frenzy_timer {
+    color: #FF9D00;
+}
+
+#wall_timer {
+    color: #0091FF;
+}
+
+#invincible_timer {
+    color: #FF0000;
+}
+
+/* Powerup activate overlay */
+
+#activate {
+    display: none;
+    pointer-events: none;
+}
+
+#activate_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    font-size: 50px;
+
+    transform: translateY(-120%) translateX(-50%);
+}
+
+.frenzyActivate {
+    color: #FF9D00;
+}
+
+.wallActivate {
+    color: #0091FF;
+}
+
+.invincibleActivate {
+    color: #FF0000;
+}
+
+/* Game over */
+
+#game_over {
+    display: none;
+}
+
+#game_over_title {
+    position: relative;
+    top: 60px;
+
+    font-size: 50px;
+}
+
+#game_over_scores {
+    position: relative;
+    top: 90px;
+
+    font-size: 30px;
+}
+
+#game_over_retry {
+    position: relative;
+    top: 130px;
+
+    font-size: 30px;
+}
+
+/* Help screen */
+
+#help_screen {
+    display: none;
+}
+
+#help_back {
+    position: absolute;
+    top: 24px;
+    left: 50px;
+}
+
+#help_title {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+
+    text-align: center;
+    font-size: 50px;
+
+    transform: translateX(-50%);
+}
+
+#help_divider {
+    height: 2px;
+    width: 1000px;
+
+    border: none;
+    background-color: #FFFFFF;
+}
+
+#help_content {
+    position: absolute;
+    top: 170px;
+    left: 50%;
+
+    text-align: center;
+    font-size: 30px;
+
+    transform: translateX(-50%);
+}
+
+.helpPowerup {
+    position: relative;
+    top: 6px;
+
+    height: 30px;
+    width: 30px;
+
+    display: inline-block;
+}
+
+#help_frenzy {
+    background-color: #FF9D00;
+}
+
+#help_wall {
+    background-color: #0091FF;
+}
+
+#help_invincible {
+    background-color: #FF0000;
+}

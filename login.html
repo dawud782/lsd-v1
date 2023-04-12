@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Blaka&family=Caveat&family=DynaPuff:wght@500&family=Exo+2:wght@300&family=Kalam&family=Merriweather+Sans:wght@500&family=Monoton&family=Mouse+Memoirs&family=Righteous&family=Yellowtail&display=swap" rel="stylesheet">
+
+    <title>Login</title>
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">
+            <h4>Lsodya<span>Platform</span></h4>
+        </div>
+        <ul>
+            <li><a href="index.html"></a></li>
+            <li><a href="leaderboard.html"></a></li>
+            <li><a href="profile.html"></a></li>
+            <li><a href="login.html"></a></li>
+            
+            <li><a href="index.html">Back</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    
+
+    <div class='box'>
+        <div class='box-form'>
+          <div class='box-login-tab'></div>
+          <div class='box-login-title'>
+            <div class='i i-login'></div><h2>LOGIN</h2>
+          </div>
+          <div class='box-login'>
+            <div class='fieldset-body' id='login_form'>
+              <button onclick="openLoginInfo();" class='b b-form i i-more' title='Mais Informações'></button>
+                  <p class='field'>
+                <label for='user'>E-MAIL</label>
+                <input type='text' id='user' name='user' title='Username' />
+                <span id='valida' class='i i-warning'></span>
+              </p>
+                  <p class='field'>
+                <label for='pass'>PASSWORD</label>
+                <input type='password' id='pass' name='pass' title='Password' />
+                <span id='valida' class='i i-close'></span>
+              </p>
+      
+                <label class='checkbox'>
+                  <input type='checkbox' value='TRUE' title='Keep me Signed in' /> Keep me Signed in
+                </label>
+      
+                  <input type='submit' id='do_login' value='GET STARTED' title='Get Started' />
+            </div>
+          </div>
+        </div>
+        <div class='box-info'>
+                              <p><button onclick="closeLoginInfo();" class='b b-info i i-left' title='Back to Sign In'></button><h3>Need Help?</h3>
+          </p>
+                              <div class='line-wh'></div>
+                              <button onclick="" class='b-support' title='Forgot Password?'> Forgot Password?</button>
+          <button onclick="" class='b-support' title='Contact Support'> Contact Support</button>
+                              <div class='line-wh'></div>
+          <button onclick="" class='b-cta' title='Sign up now!'> CREATE ACCOUNT</button>
+                        </div>
+      </div>
+      
+      
+       
+        
+
+    <script src="login.js"></script>
+</body>
+</html>
